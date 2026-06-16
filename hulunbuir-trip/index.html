@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>呼伦贝尔家庭自驾旅行方案</title>
+  <style>
+    :root{--ink:#17212b;--muted:#5f6f7b;--line:#dbe5e2;--paper:#f6faf7;--green:#2d7650;--blue:#2c6b98;--amber:#a76518;--coral:#a94736;--dark:#15242b}
+    *{box-sizing:border-box}body{margin:0;color:var(--ink);background:var(--paper);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;line-height:1.66}a{color:inherit}img{display:block;max-width:100%}
+    .hero{min-height:78vh;color:#fff;background-image:linear-gradient(90deg,rgba(10,27,32,.76),rgba(10,27,32,.18)),url("https://www.chinadiscovery.com/assets/images/inner-mongolia/attractions/hulunbuir.jpg");background-size:cover;background-position:center;display:flex;align-items:center;position:relative}
+    .hero:after{content:"";position:absolute;inset:auto 0 0;height:18vh;background:linear-gradient(180deg,rgba(246,250,247,0),var(--paper))}
+    .inner,.container{width:min(1100px,calc(100% - 40px));margin:0 auto}.hero .inner{position:relative;z-index:1;padding:72px 0 110px}
+    .eyebrow{display:inline-flex;padding:6px 10px;border:1px solid rgba(255,255,255,.44);border-radius:8px;background:rgba(255,255,255,.14);font-size:13px}
+    h1,h2,h3{margin:0;line-height:1.18;letter-spacing:0}h1{max-width:780px;margin-top:22px;font-size:clamp(38px,6vw,72px);font-weight:820}h2{font-size:clamp(26px,3vw,38px)}h3{font-size:19px}
+    .hero p{max-width:730px;margin:22px 0 0;color:rgba(255,255,255,.92);font-size:clamp(17px,2vw,22px)}
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}.actions a{min-height:44px;padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:750;border:1px solid rgba(255,255,255,.52);background:rgba(255,255,255,.16)}.actions a:first-child{background:#fff;color:#203034}
+    section{padding:68px 0}.band{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.facts{position:relative;z-index:2;margin-top:-72px;display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+    .fact,.card,.stop,.day,.check,.notice,.table-wrap{background:#fff;border:1px solid var(--line);border-radius:8px}.fact{min-height:112px;padding:18px;box-shadow:0 18px 42px rgba(24,45,50,.12)}.fact span{color:var(--muted);font-size:13px}.fact strong{display:block;margin-top:6px;font-size:18px;line-height:1.28}
+    .head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin-bottom:26px}.note{max-width:430px;margin:0;color:var(--muted);font-size:15px}.lead{font-size:19px;color:#2b3840;margin:0}.grid2{display:grid;grid-template-columns:1.05fr .95fr;gap:28px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{overflow:hidden}.body{padding:22px}
+    .pillrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}.pill{padding:5px 10px;border-radius:8px;background:#edf6f1;color:#206d47;font-size:13px;font-weight:720}.blue{background:#e8f3f9;color:#245f89}.amber{background:#fff1d8;color:#825014}.coral{background:#faece8;color:#913f31}
+    .route{display:grid;grid-template-columns:repeat(7,1fr);gap:10px;margin-top:24px}.stop{min-height:122px;padding:16px 12px}.stop:before{content:attr(data-day);display:inline-flex;min-height:28px;align-items:center;padding:0 8px;border-radius:8px;background:var(--dark);color:#fff;font-size:12px;font-weight:800;margin-bottom:12px}.stop span{display:block;margin-top:8px;color:var(--muted);font-size:13px;line-height:1.42}
+    .photo img{width:100%;aspect-ratio:4/3;object-fit:cover}.caption{padding:13px 16px 16px;color:var(--muted);font-size:13px}
+    .timeline{display:grid;gap:14px}.day{display:grid;grid-template-columns:82px 1fr 150px;gap:18px;align-items:center;padding:16px}.num{min-height:62px;border-radius:8px;color:#fff;background:linear-gradient(135deg,var(--green),var(--blue));display:flex;align-items:center;justify-content:center;font-weight:900;font-size:22px}.day p{margin:7px 0 0;color:var(--muted)}.stay{border-left:3px solid #d5aa65;padding-left:12px;color:#614719;font-weight:720}
+    table{width:100%;border-collapse:collapse;min-width:720px}.table-wrap{overflow-x:auto}th,td{padding:12px 13px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{background:#f1f6f4;font-size:13px;white-space:nowrap}.money{font-weight:800;color:#244c37;white-space:nowrap}
+    .notice{padding:18px;background:#fff7e8;border-color:#edd3a7;color:#614314}.checks{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.check{padding:18px}.check h3{margin-bottom:9px}.check ul{margin:0;padding-left:18px;color:#3d4d55}.check li+li{margin-top:7px}
+    footer{background:var(--dark);color:rgba(255,255,255,.86);padding:32px 0;font-size:13px}.footerline{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    @media(max-width:920px){.facts,.grid3,.checks{grid-template-columns:repeat(2,1fr)}.grid2{grid-template-columns:1fr}.route{grid-template-columns:repeat(2,1fr)}.day{grid-template-columns:70px 1fr}.stay{grid-column:2}}
+    @media(max-width:620px){.inner,.container{width:min(100% - 28px,1100px)}section{padding:50px 0}.head{display:block}.note{margin-top:12px}.facts,.grid3,.checks,.route{grid-template-columns:1fr}.day{grid-template-columns:1fr}.stay{grid-column:auto}.actions{flex-direction:column}.actions a{text-align:center}}
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="inner">
+      <div class="eyebrow">2026 暑假 · 南京往返海拉尔 · 家庭自驾</div>
+      <h1>呼伦贝尔家庭自驾 7 天 6 晚方案</h1>
+      <p>围绕海拉尔、莫日格勒河、额尔古纳湿地、室韦/恩和、根河敖鲁古雅、黑山头和满洲里设计，保留孩子最期待的喂驯鹿体验，同时住宿都放在城区或镇区。</p>
+      <div class="actions"><a href="#route">查看路线</a><a href="#budget">预算</a><a href="#packing">装备清单</a></div>
+    </div>
+  </header>
+  <main>
+    <section class="container">
+      <div class="facts">
+        <div class="fact"><span>推荐时长</span><strong>7 天 6 晚优先</strong></div>
+        <div class="fact"><span>出行人员</span><strong>4 大 2 小，可扩到 8-9 人</strong></div>
+        <div class="fact"><span>航线监控</span><strong>NKG 往返 HLD，仅直飞</strong></div>
+        <div class="fact"><span>必选体验</span><strong>根河敖鲁古雅喂驯鹿</strong></div>
+        <div class="fact"><span>住宿原则</span><strong>住城区/镇区，不住景区内</strong></div>
+      </div>
+    </section>
+    <section id="summary">
+      <div class="container grid2">
+        <div>
+          <div class="head"><h2>先看结论</h2></div>
+          <p class="lead">这条线最适合做成“草原 + 森林 + 湿地 + 边境小城”的家庭环线。6 天能跑核心点，7 天能把喂驯鹿、边境公路和满洲里都安排得更从容。</p>
+          <div class="pillrow"><span class="pill">7 天更稳</span><span class="pill blue">MPV 可走常规路线</span><span class="pill amber">机票低于 8500 可锁</span><span class="pill coral">总预算 20000 偏紧</span></div>
+        </div>
+        <div class="notice"><strong>预算提醒：</strong>20000 元若包含 3 大 2 小机票、租车、酒店、餐饮和门票，会比较紧。更现实的省钱版约 21000-25000 元，关键看直飞机票和租车价格。</div>
+      </div>
+    </section>
+    <section class="band" id="route">
+      <div class="container">
+        <div class="head"><h2>推荐路线</h2><p class="note">海拉尔进出，逆时针小环线。每晚住城区或镇区，方便停车、吃饭和补给。</p></div>
+        <div class="route">
+          <div class="stop" data-day="D1"><strong>南京 - 海拉尔</strong><span>抵达、取车、补给，住海拉尔城区</span></div>
+          <div class="stop" data-day="D2"><strong>莫日格勒河 - 额尔古纳</strong><span>草原曲水与湿地日落，住额尔古纳城区</span></div>
+          <div class="stop" data-day="D3"><strong>额尔古纳 - 室韦/恩和</strong><span>森林、边境小镇、木刻楞风格</span></div>
+          <div class="stop" data-day="D4"><strong>室韦/恩和 - 根河</strong><span>重点：敖鲁古雅驯鹿部落</span></div>
+          <div class="stop" data-day="D5"><strong>根河 - 黑山头</strong><span>回到草原，可选牧户体验/日落</span></div>
+          <div class="stop" data-day="D6"><strong>黑山头 - 满洲里</strong><span>边防公路、186 彩带河、满洲里夜景</span></div>
+          <div class="stop" data-day="D7"><strong>满洲里 - 海拉尔 - 南京</strong><span>返程，预留加油和还车时间</span></div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container grid3">
+        <div class="card photo"><img src="https://www.chinadiscovery.com/inner-mongolia/assets/images/travel-guide/hulunbuir/aoluguya-reindeer-370.jpg" alt="敖鲁古雅喂驯鹿"><div class="caption">必选体验：根河敖鲁古雅喂驯鹿，建议放在 D4 下午。</div></div>
+        <div class="card photo"><img src="https://www.chinadiscovery.com/assets/images/inner-mongolia/hulunbuir/ergun/ergun-wetland.jpg" alt="额尔古纳湿地"><div class="caption">额尔古纳湿地更适合傍晚，住宿回城区。</div></div>
+        <div class="card photo"><img src="https://www.chinadiscovery.com/inner-mongolia/assets/images/travel-guide/hulunbuir/matrioshka-square-370.jpg" alt="满洲里套娃广场"><div class="caption">满洲里安排一晚城区住宿，保留轻松夜游。</div></div>
+      </div>
+    </section>
+    <section class="band">
+      <div class="container">
+        <div class="timeline">
+          <div class="day"><div class="num">D1</div><div><h3>南京 - 海拉尔</h3><p>取车、检查车辆、采购饮用水和常用药，不安排长距离驾驶。</p></div><div class="stay">住海拉尔城区</div></div>
+          <div class="day"><div class="num">D2</div><div><h3>海拉尔 - 莫日格勒河 - 额尔古纳</h3><p>草原曲水和湿地日落是重点，雨天缩短停留。</p></div><div class="stay">住额尔古纳城区</div></div>
+          <div class="day"><div class="num">D3</div><div><h3>额尔古纳 - 室韦/恩和</h3><p>路程舒适，适合看森林、界河和边境小镇。</p></div><div class="stay">住室韦或恩和镇区</div></div>
+          <div class="day"><div class="num">D4</div><div><h3>室韦/恩和 - 根河 - 敖鲁古雅</h3><p>只用现场允许的饲料，不追赶、不尖叫、不从背后靠近驯鹿。</p></div><div class="stay">住根河城区</div></div>
+          <div class="day"><div class="num">D5</div><div><h3>根河 - 额尔古纳 - 黑山头</h3><p>根据孩子状态选择牧户体验或日落，不强塞骑马。</p></div><div class="stay">住黑山头镇区</div></div>
+          <div class="day"><div class="num">D6</div><div><h3>黑山头 - 边防公路 - 满洲里</h3><p>边境公路和草原坡地是视觉重点，晚上进满洲里。</p></div><div class="stay">住满洲里城区</div></div>
+          <div class="day"><div class="num">D7</div><div><h3>满洲里 - 海拉尔 - 南京</h3><p>返程日只保留轻量景点，留足加油、还车和机场手续时间。</p></div><div class="stay">返程</div></div>
+        </div>
+      </div>
+    </section>
+    <section id="car">
+      <div class="container">
+        <div class="head"><h2>租车建议</h2><p class="note">草原路况不是不能开 MPV，关键是只走铺装路和正规景区道路。</p></div>
+        <div class="table-wrap"><table><thead><tr><th>人数</th><th>推荐车型</th><th>适合度</th><th>旺季估价</th><th>关键提醒</th></tr></thead><tbody>
+          <tr><td>6 人</td><td>别克 GL8/传祺 M8 同级 MPV</td><td>高</td><td class="money">800-1500 元/天</td><td>常规线路足够，乘坐舒服，后备箱比多数 7 座 SUV 实用。</td></tr>
+          <tr><td>6 人</td><td>汉兰达/途昂/探险者类 7 座 SUV</td><td>中</td><td class="money">700-1300 元/天</td><td>通过性略好，但第三排和行李空间更紧。</td></tr>
+          <tr><td>8-9 人</td><td>GL8 + 5 座 SUV，或两辆 5/7 座车</td><td>高</td><td class="money">1200-2200 元/天合计</td><td>分摊行李和驾驶压力，小镇停车也更灵活。</td></tr>
+        </tbody></table></div>
+        <div class="notice" style="margin-top:18px"><strong>MPV 路况建议：</strong>走铺装公路、正规景区道路、城区/镇区住宿没问题；不要开进草地、牧道、雨后土路或不明小路。遇到大雨、浓雾、夜路，直接改保守路线。</div>
+      </div>
+    </section>
+    <section class="band" id="hotels">
+      <div class="container">
+        <div class="head"><h2>住宿策略</h2><p class="note">全部选城区或镇区，优先免费停车、家庭房/三人间、评分 4.6+、热水评价稳定。</p></div>
+        <div class="table-wrap"><table><thead><tr><th>城市/镇区</th><th>推荐区域</th><th>目标价格</th><th>订房建议</th></tr></thead><tbody>
+          <tr><td>海拉尔</td><td>成吉思汗广场、河东/河西商圈、机场到市区沿线</td><td class="money">300-550 元/间夜</td><td>方便取车和补给，优先连锁中端或新开酒店。</td></tr>
+          <tr><td>额尔古纳</td><td>拉布大林主城区、额尔古纳大街附近</td><td class="money">300-600 元/间夜</td><td>不住湿地景区内，城区吃饭停车更方便。</td></tr>
+          <tr><td>室韦/恩和</td><td>镇区主街附近</td><td class="money">350-700 元/间夜</td><td>木刻楞民宿看隔音和独卫，带娃优先正规酒店/客栈。</td></tr>
+          <tr><td>根河</td><td>根河城区主街、近敖鲁古雅方向出城口</td><td class="money">250-500 元/间夜</td><td>重点看热水、供暖保温和停车评价。</td></tr>
+          <tr><td>黑山头</td><td>黑山头镇区</td><td class="money">300-700 元/间夜</td><td>看日落方便，但住宿条件一般；也可回额尔古纳。</td></tr>
+          <tr><td>满洲里</td><td>中苏金街、套娃广场外圈、市中心</td><td class="money">300-650 元/间夜</td><td>选择多，优先市区，不住景区内部酒店。</td></tr>
+        </tbody></table></div>
+      </div>
+    </section>
+    <section id="budget">
+      <div class="container">
+        <div class="head"><h2>粗预算</h2><p class="note">按 6 人本地费用 + 3 大 2 小机票估算。新增人员机票自理，但应分摊租车、油费和部分住宿。</p></div>
+        <div class="table-wrap"><table><thead><tr><th>项目</th><th>控制目标</th><th>说明</th></tr></thead><tbody>
+          <tr><td>机票 3 大 2 小</td><td class="money">8500-10500 元</td><td>低于 8500 可直接锁；超过 12000 会明显挤压本地预算。</td></tr>
+          <tr><td>租车 6-7 天</td><td class="money">5500-8500 元</td><td>GL8/同级 MPV，含基础险但不含全部油费。</td></tr>
+          <tr><td>油费/停车</td><td class="money">1200-1800 元</td><td>主路往返路费不高，油费是大头。</td></tr>
+          <tr><td>住宿 6 晚</td><td class="money">5400-9000 元</td><td>按 3 间房，每间 300-500 元更可控。</td></tr>
+          <tr><td>餐饮</td><td class="money">3600-5200 元</td><td>6 人，简餐 + 几顿蒙餐。</td></tr>
+          <tr><td>门票/体验</td><td class="money">1800-3500 元</td><td>驯鹿、湿地、骑马/牧户体验视选择浮动。</td></tr>
+        </tbody></table></div>
+      </div>
+    </section>
+    <section class="band" id="packing">
+      <div class="container">
+        <div class="head"><h2>必要装备</h2><p class="note">呼伦贝尔夏天白天晒、早晚凉、风大，带娃自驾要按“长车程 + 强紫外线 + 草地蚊虫”准备。</p></div>
+        <div class="checks">
+          <div class="check"><h3>证件和订单</h3><ul><li>身份证、儿童证件或户口本</li><li>驾照、租车订单、酒店订单</li><li>机票和关键订单离线截图</li></ul></div>
+          <div class="check"><h3>衣物和防晒</h3><ul><li>短袖、快干长袖长裤、防晒衣</li><li>薄外套/冲锋衣或抓绒</li><li>SPF50 防晒、帽子、太阳镜</li></ul></div>
+          <div class="check"><h3>防虫和药品</h3><ul><li>儿童可用驱蚊液、止痒药膏</li><li>退烧药、肠胃药、晕车药</li><li>创可贴、碘伏棉签、体温计</li></ul></div>
+          <div class="check"><h3>车内用品</h3><ul><li>手机支架、车充、充电宝</li><li>离线地图、纸巾、湿巾、垃圾袋</li><li>保温杯、小毯子、颈枕</li></ul></div>
+          <div class="check"><h3>食物饮水</h3><ul><li>矿泉水、常温牛奶/酸奶</li><li>面包、饼干、水果、儿童零食</li><li>不要赌“下一家餐厅很近”</li></ul></div>
+          <div class="check"><h3>儿童安全</h3><ul><li>5 岁儿童建议安全座椅或增高垫</li><li>9 岁孩子身高不足也建议增高垫</li><li>喂驯鹿时不追赶、不尖叫、不背后靠近</li></ul></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="container footerline"><span>呼伦贝尔家庭自驾旅行分享版 · 2026-06-16</span><span>图片用于旅行方案展示，来源：China Discovery；具体景观以实际天气和现场为准。</span></div></footer>
+</body>
+</html>
